@@ -86,3 +86,36 @@
     // Depois de trocados, teremos o seguinte resultado:
     console.log("O novo valor de a é", a) // O novo valor de a é 25
     console.log("O novo valor de b é", b) // O novo valor de b é 10
+
+    /*- **DESAFIO**
+
+    Essa seção é OPCIONAL e só deve ser feita se você terminou todos os exercícios propostos anteriormente!
+
+    1. Faça um programa que receba dois números do usuário e faça as seguintes operações, imprimindo os 
+    resultados no console da seguinte forma:
+
+        ```
+        1. O primeiro número somado ao segundo número resulta em: x.
+        2. O primeiro número multiplicado pelo segundo número resulta em: y.
+        ```
+
+        - 💡  Dica
+
+            Se os resultados das operações não estiverem corretos, reflita sobre o 
+            **tipo dos valores recebidos pelo prompt.**/
+
+            const numero1 = Number(prompt("Qual o primeiro número?"))
+            const numero2 = Number(prompt("Agora adicione o segundo número."))
+            
+            let soma = numero1 + numero2
+        
+            console.log("Valor da soma é", soma)
+
+            let multiplicacao = numero1 * numero2
+
+            console.log("Valor da multiplicação é", multiplicacao)
+
+
+
+
+
