@@ -103,9 +103,47 @@ console.log(fraseNova)
        console.log(recebeDadosDois(dadosPessoasOutro))
        
 
-  
-        
-  
+  /*
+  a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
+
+b) Crie três novos objetos que representem frutas de um sacolão. Eles devem ter as seguintes 
+propriedades: nome (`string`) e disponibilidade (`boolean` - devem começar como `true`)
+
+c) Crie uma função que **receba** um objeto fruta por **parâmetro** e coloque-a dentro do 
+array de `carrinho`. Invoque essa função passando os três objetos criados. 
+
+- 💡  Dica
+
+    Aqui você deve usar o método **push()**/
+
+
+    const carrinho = []
+
+    const frutasSacolaoClienteUm = {
+        nome: 'Maça',
+        temFruta: true
+    }
+
+    const frutasSacolaoClienteDois = {
+        nome: 'Laranja',
+        temFruta: true
+    }
+
+    const frutasSacolaoClienteTres = {
+        nome: 'Melância',
+        temFruta: true
+    }
+
+    function recebeFrutas(carrinho){
+    
+        carrinho.push(frutasSacolaoClienteUm, frutasSacolaoClienteDois, frutasSacolaoClienteTres)
+      
+
+        return carrinho
+    }
+
+
+    console.log(recebeFrutas(carrinho))
         
 
 
