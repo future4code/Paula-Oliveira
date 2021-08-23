@@ -13,7 +13,17 @@ function retornaTamanhoArray(array) {
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
   
+  return array.reverse()
+
+  
 }
+
+  const arrayInvertido = array.map(function (item, indice, array){
+        return array[array.length - indice - 1];
+      })
+      console.log(array)
+      
+      console.log(arrayInvertido)
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
