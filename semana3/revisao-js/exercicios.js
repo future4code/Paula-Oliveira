@@ -4,19 +4,19 @@
 
 
 // EXERCÍCIO 01
-// function retornaTamanhoArray(array) {
+function retornaTamanhoArray(array) {
 
-//     return array.length
-// }
+    return array.length
+}
 
 
 // EXERCÍCIO 02
-// function retornaArrayInvertido(array) {
+function retornaArrayInvertido(array) {
   
-//   return array.reverse()
+  return array.reverse()
 
 
-// }
+ }
 //-------- DESAFIO
 //   const arrayInvertido = array.map(function (item, indice, array){
 //         return array[array.length - indice - 1];
@@ -26,28 +26,34 @@
 //       console.log(arrayInvertido)
 
 // EXERCÍCIO 03
-// function retornaArrayOrdenado(array) {
-//     return array.sort(function(a,b){
-//         if (a > b){
-//              return 1}
-//         if (a < b){
-//              return -1}
-//         return 0
-//     })  
-
+function retornaArrayOrdenado(array) {
+    return array.sort(function(a,b){
+        if (a > b){
+             return 1}
+        if (a < b){
+             return -1}
+        return 0
+    })  
+}
 // EXERCÍCIO 04
-// function retornaNumerosPares(array) {
+function retornaNumerosPares(array) {
    
-//     let retorno = array.filter(pares => (pares % 2)=== 0)
+    let retorno = array.filter(pares => (pares % 2)=== 0)
 
-//     return retorno
-//      } 
+    return retorno
+     } 
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    
-    
+    let retorno = array.filter(pares => (pares % 2)=== 0) 
+
+    let numeroElevado = Math.pow(retorno, 2)
+    console.log(numeroElevado)
+  
+    return numeroElevado
+
 }
+
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
