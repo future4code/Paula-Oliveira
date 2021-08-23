@@ -45,19 +45,18 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    let retorno = array.filter(pares => (pares % 2)=== 0) 
-
-    let numeroElevado = Math.pow(retorno, 2)
-    console.log(numeroElevado)
   
-    return numeroElevado
-
 }
-
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    let maior = -1
+  for (let numero of array){
+      if(numero > maior){
+          maior = numero
+      }
+  }
+    return maior
 }
 
 // EXERCÍCIO 07
