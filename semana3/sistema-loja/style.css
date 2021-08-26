@@ -1,0 +1,20 @@
+
+h1{
+    color: rgb(212, 18, 51);
+
+}
+
+div {
+    background-color: chocolate;
+    border: 1px solid black;
+}
+
+.img-resize {
+    width: 50px; /* you can use % */
+    height: auto;
+}
+
+.img-produtos {
+    width: 150px; /* you can use % */
+    height: auto;
+}
