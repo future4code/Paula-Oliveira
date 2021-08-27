@@ -86,6 +86,10 @@ div img {
     font-size: 60px;
 }
 
+.p-container {
+    white-space: pre-line;
+   }
+
 
 /**
   *
