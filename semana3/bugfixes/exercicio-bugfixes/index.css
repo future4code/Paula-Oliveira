@@ -104,6 +104,12 @@ div:last-child {
 
 table {
     width: 60%;
+    /* text-align: center;  */
+    
+}
+
+.texto{
+    text-align: center;
 }
 
 td button {
@@ -142,3 +148,4 @@ p {
     margin-inline-start: 1px;
     margin-inline-end: 0px;
 }
+
