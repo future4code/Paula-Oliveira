@@ -1,0 +1,85 @@
+/* Estelização em toda a pagina */
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #043684;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Página home estilização */
+
+h2{
+    
+    margin: 40px 5px 8px 30px;
+    padding: 0px 15px 10px 5px;
+    text-align: center;
+    font-size: 200%;
+    color:rgb(212, 216, 245);
+}
+
+img{
+    width: 480px;
+    margin: 10px 5px 1px 100px;
+    padding: 1px 5px 10px 10px;
+    top: px;
+    /* position: absolute; */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.p-container {
+    white-space: pre-line;
+}
+
+p {
+    display: block;
+    font-weight: 800;
+    margin-block-start: 5em;
+    margin-block-end: -1em;
+    margin-inline-start: -260px;
+    margin-inline-end: 0px;
+    color:rgb(6, 8, 29);  
+}
+
+
+.botao-galeria:hover {
+    background-color: #88C7C3;
+}
+
+.botao-sobre-mim {
+    background-color: #545454;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    color:white;
+    margin-block-start: 8em;
+    margin-block-end: -1em;
+    margin-inline-start: -340px;
+    margin-inline-end: 10px;   
+}
+
+.botao-projeto {
+    background-color: #545454;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    color:white;
+    margin-block-start: 12em;
+    margin-block-end: -1em;
+    margin-inline-start: -360px;
+    margin-inline-end: 10px;    
+    }
+
+dl{
+    font:small;
+    margin: 50px 5px 0px 100px;
+    padding: 10px 5px 10px 5px;
+    /* text-align: center; */
+}
+ 
+  
