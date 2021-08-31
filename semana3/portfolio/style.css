@@ -22,7 +22,6 @@ footer{
     border: 0;
     border-top: 2px solid rgb(147, 150, 182);
     background-color: #000066;
-
 }
 
 /* --------- Página Index ------------- */
@@ -190,6 +189,8 @@ td{
 #footer{
     margin: -auto 20px 10px 90px;
     padding: 44px 0px 0px 0px;
+    /* position:fixed;
+    bottom: 0; */
 }
 
 .img-icone-rodape{
