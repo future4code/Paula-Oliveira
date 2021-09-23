@@ -1,0 +1,253 @@
+/* Estelização em toda a pagina */
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #000066; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+    margin: 0px 0px 6px 0px;
+    text-align: center;
+    font-size: large;
+    border: 0;
+    border-bottom: 1px solid rgb(147, 150, 182);
+    background-color: #000066;
+}
+
+footer{
+    text-align: center;
+    color: #00A0F3;
+    font-size: large;
+    border: 0;
+    border-top: 2px solid rgb(147, 150, 182);
+    background-color: #000066;
+}
+
+/* --------- Página Index ------------- */
+
+.body-index{
+    background-color: #000066;
+}
+
+h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #FAFBF4;
+}
+
+h2{
+    margin: 0px 5px 8px 30px;
+    padding: 0px 15px 10px 5px;
+    text-align: center;
+    font-size: 200%;
+    color:rgb(212, 216, 245);
+}
+
+.img-index{
+    width: 480px;
+    margin: 8px 5px 1px 100px;
+    padding: 1px 5px 10px 10px;
+    top: px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.p-container{
+    white-space: pre-line;
+}
+
+#p {
+    display: block;
+    font-weight: 800;
+    margin-block-start: 3em;
+    margin-block-end: -1em;
+    margin-inline-start: -260px;
+    margin-inline-end: 0px;
+    color:#00A0F3  
+}
+
+#botao:hover{
+    background-color: grey;
+}
+
+.botao-sobre-mim {
+    background-color:#272736;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 25px;
+    color:white;
+    margin-block-start: 6em;
+    margin-block-end: -1em;
+    margin-inline-start: -340px;
+    margin-inline-end: 10px;   
+}
+
+.botao-projeto {
+    background-color: #272736;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 25px;
+    color:white;
+    margin-block-start: 10em;
+    margin-block-end: -1em;
+    margin-inline-start: -364px;
+    margin-inline-end: 10px;    
+}
+
+.botao-habilidades {
+    background-color: #272736;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 25px;
+    color:white;
+    margin-block-start: 14em;
+    margin-block-end: -1em;
+    margin-inline-start: -365px;
+    margin-inline-end: 10px;    
+}
+
+.botao-contatos {
+    background-color: #272736;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 25px;
+    color:white;
+    margin-block-start: 18em;
+    margin-block-end: 0.1em;
+    margin-inline-start: -369px;
+    margin-inline-end: 10px;    
+}
+
+/* --------- Sobre Mim--------------*/
+
+.body-home{
+    background-color: #0000FF;
+}
+
+.header-sobre{
+    display: flex;
+    width: 100%;
+    padding: 10px 0px 8px 0px;
+}
+   
+#texto-cabecalho{
+   width: 0px;
+   border:solid 2px;
+   border-radius: 10px 220px 390px ;
+   }
+   
+a{
+    color: white;
+    text-decoration: none;
+    margin: 2px;
+    font-size: 20px;
+}
+
+.img-sobre{
+    width: 300px;
+    margin: -20px 1px 32px 10px;
+    padding: 150px 5px 50px 100px;
+    top: 0px;
+}
+
+#p-sobre {
+    white-space: pre;
+}
+
+.p-tabela{
+    border: 1px;
+    border-style: double;
+    border-bottom-width: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-left-width: 0;
+}
+
+table {
+width: 52.1%;
+background:#272736;
+margin-bottom : .1em;
+margin: -140px 1px 65px 410px;
+table-layout: fixed; 
+text-align: center;
+}
+
+td{
+    padding: .2em;
+    margin: 0;
+    border: 1px solid rgb(7, 7, 7);
+    text-align: center;
+}
+
+#footer{
+    margin: -auto 20px 10px 90px;
+    padding: 44px 0px 0px 0px;
+    /* position:fixed;
+    bottom: 0; */
+}
+
+.img-icone-rodape{
+    width: 50px;
+}
+
+#img-rodape-position{
+    position: fixed;
+    top: 580px;
+    left: 1100px;
+    right: 20px;
+}
+
+#img-instagram{
+    width: 65px;
+}
+
+
+/* ------------- PAGINA PROJETO */
+
+.img-projeto{ 
+    width: 100px;
+} 
+
+#td{
+    margin: 0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+    
+#tr{
+    margin-top: -0px;
+}
+      
+.table-projeto{
+    float: left;
+    width: 60%;
+    background:#272736;
+    margin-bottom : .1em;
+    margin: 150px 1px 0px 300px;
+    table-layout:auto; 
+    text-align: center;
+    }
+
+.text-borda{
+    color: gray;
+    font-weight: bold;
+}
+
+.text-da-tabela{
+    color: gray;
+}
+
+
+
+
+
+
+
+  
