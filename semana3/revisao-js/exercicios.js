@@ -62,6 +62,10 @@ function retornaMaiorNumero(array) {
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 
+    - `maiorNumero` → contém o maior número
+- `maiorDivisivelPorMenor` → booleano indicando se o maior é divisível pelo menor
+- `diferenca` → contém a diferença entre eles (deve ser um **número positivo** sempre)
+
 }
 
 // EXERCÍCIO 08
@@ -106,8 +110,9 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
-}
+    
+    }
+
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
