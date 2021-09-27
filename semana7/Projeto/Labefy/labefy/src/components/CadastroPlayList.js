@@ -1,11 +1,44 @@
 import React from "react";
 import axios from "axios";
+import styled from "styled-components";
 
-const headers = {
-  headers: {
-    Authorization: "paula-rabelo-maryam",
-  },
-};
+  const headers = {
+    headers: {
+      Authorization: "paula-rabelo-maryam",
+    },
+  };
+
+  const ContainerBody = styled.body`
+      display: flex;
+      align-item: center;
+      justify-content: center; 
+      padding: 100px;
+      background-color: #88CA5E;
+      height: 50vh; 
+  `    
+  const CadastroContainer = styled.div`
+      background-color:#F1C0B9;
+      width: 300px;
+      height: 100px;  
+      padding: 50px;
+      border: 2px solid white;
+      display: flex;
+      flex-direction: column;
+      aline-item: center;
+      justify-content: center;   
+      `
+  const Button = styled.button`
+      background-color: #88CA5E;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+      margin: 4px 2px;
+      cursor: pointer;
+    `
+
 export default class CadastroPlayList extends React.Component {
   state = {
     namePlayList: "",
@@ -34,24 +67,18 @@ export default class CadastroPlayList extends React.Component {
   };
 
   render() {
-   
-
-    return (
-      <>
-        <div>
-          <h2>Cadastro PlayList</h2>
-        </div>
-        <p>PlayList</p>
-        <input 
-        placeholder="PlayList Name"
-        value={this.state.namePlayList}
-        onChange={this.handleUserPlayList}
-         />
-        <button onClick={this.createrPlayList}></button>
-
-        <p>Nome da Musica</p>
-        <input />
-      </>
+      return (
+      <ContainerBody>
+        <CadastroContainer>
+          <h2>Cadastro PlayList</h2> 
+          <input 
+            placeholder="PlayList Name"
+            value={this.state.namePlayList}
+            onChange={this.handleUserPlayList}
+          />
+          <Button onClick={this.createrPlayList}>Adicionar</Button>
+        </CadastroContainer>
+      </ContainerBody>
     );
   }
 }
