@@ -1,63 +1,70 @@
-import React, {useState, useEffect} from "react";
-import {ContainerList} from "./styled"
+import React, { useState, useEffect } from "react";
+import limpar from "../img/limpar.png";
+import {
+  ContainerButtonClear,
+  ContainerDiv,
+  ContainerH3,
+  ContainerImg,
+  ContainerImgClear,
+  ContainerList,
+  ContainerNova,
+  ContainerP,
+} from "./styled";
 import axios from "axios";
 
+const TelaListaMatches = () => {
+  const [matchPerson, setMatchPerson] = useState([]);
 
-const TelaListaMatches = (props) =>{
+  const getMatches = () => {
+    axios
+      .get(
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/paula-rabelo-maryam/matches`
+      )
+      .then((res) => {
+        setMatchPerson(res.data.matches);
+      })
+      .catch((err) => {
+        console.log(err.response);
+      });
+  };
 
-    const [matchPerson, setMatchPerson] = useState([])
+  useEffect(() => {
+    getMatches();
+  }, []);
 
-    const getMatches = () => {
-      axios
-        .get(
-          `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/paula-rabelo-maryam/matches`
-        )
-        .then((res) => {
-          console.log(res.data);
-          setMatchPerson(res.data.matches);
-        })
-        .catch((err) => {
-          console.log(err.response);
-        });
-    };
+  const putClearMatches = () => {
+    axios
+      .put(
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/paula-rabelo-maryam/clear`
+      )
+      .then((res) => {
+        setMatchPerson([]);
+      })
+      .catch((err) => {
+        console.log(err.response);
+      });
+  };
 
-    useEffect(() => {
-      getMatches()
-    }, []);
+  const pageList = matchPerson.map((match) => {
+    return (
+      <ContainerList>
+        <ContainerImg src={match.photo}></ContainerImg>
+        <ContainerP>{match.name}</ContainerP>
+      </ContainerList>
+    );
+  });
 
-    const putClearMatches = () => {
-        axios
-          .put(
-            `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/paula-rabelo-maryam/clear`
-          )
-          .then((res) => {
-            console.log(res.data);
-            setMatchPerson([])
-          })
-          .catch((err) => {
-            console.log(err.response);
-          });
-      };
-   
-        const pageList = matchPerson.map((match) => {
-            return<ContainerList>
-              <img src={match.photo}/>
-              <p>{match.name}</p>
-              </ContainerList>
-          })
-
-    return(
-       <div>
-          <button onClick={() => props.changePage("0")}>Home</button>
-          <h3>Lista de Matches</h3>
-         <div> {pageList}  <button onClick={putClearMatches}>clear</button> </div>
-
-       
-               
-   
+  return (
+    <div>
+      <ContainerDiv>
+        <ContainerH3>Lista de Matches</ContainerH3>
+        <ContainerButtonClear onClick={putClearMatches}>
+          <ContainerImgClear src={limpar} alt="Excluir todos os matches" />
+        </ContainerButtonClear>
+      </ContainerDiv>
+      <ContainerNova>{pageList}</ContainerNova>
     </div>
-        
-    )
-}
+  );
+};
 
-export default TelaListaMatches
+export default TelaListaMatches;

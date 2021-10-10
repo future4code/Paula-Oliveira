@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
-import {ButtonEspaco, Container, ContainerBorder, ContainerButton, ContainerButtonNovos, ContainerDiv, ContainerImg, ContainerP} from "./styled"
+import {
+  Container,
+  ContainerButton,
+  ContainerButtonNovos,
+  ContainerH2,
+  ContainerImg,
+  ContainerBio,
+  ContainerP,
+} from "./styled";
 import axios from "axios";
+import { ContainerNotList } from "../../styled";
 
-const TelaInicial = (props) => {
+const TelaInicial = () => {
   const [profile, setProfile] = useState({});
 
   const getProfileToChoose = () => {
@@ -40,23 +49,27 @@ const TelaInicial = (props) => {
 
   return (
     <Container>
-      <ContainerBorder>
-        <h3>AstroMatch</h3>
-        <button onClick={() => props.changePage("1")}>Matches</button>
-      </ContainerBorder>
-
-      {profile? <ContainerDiv>
-        <ContainerImg src={profile.photo} />
-        <h2>
-          {profile.name}, {profile.age} anos
-        </h2>
-        <ContainerP>{profile.bio}</ContainerP>
-        <ContainerButton>
-          
-        <ContainerButtonNovos onClick={() => postChoosePerson(false)}>X</ContainerButtonNovos>
-        <ContainerButtonNovos onClick={() => postChoosePerson(true)}>0</ContainerButtonNovos>
-        </ContainerButton>
-      </ContainerDiv> : <p>Oi</p>}
+      {profile ? (
+        <div>
+          <ContainerImg src={profile.photo} />
+          <ContainerH2>
+            {profile.name} - {profile.age} anos
+          </ContainerH2>
+          <ContainerBio>
+            <ContainerP>{profile.bio}</ContainerP>
+          </ContainerBio>
+          <ContainerButton>
+            <ContainerButtonNovos onClick={() => postChoosePerson(false)}>
+              &#10006;
+            </ContainerButtonNovos>
+            <ContainerButtonNovos onClick={() => postChoosePerson(true)}>
+              &#10084;
+            </ContainerButtonNovos>
+          </ContainerButton>
+        </div>
+      ) : (
+        <ContainerNotList>Não há mais matches!</ContainerNotList>
+      )}
     </Container>
   );
 };

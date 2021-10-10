@@ -4,54 +4,28 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;  
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
 `;
-
-export const ContainerBorder = styled.div`
-    border: 2px solid black;
-    width:320px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-   
-`
-
-export const ContainerDiv = styled.div`
-    border: 5px solid #672901;
-    background: linear-gradient(45deg, #F76201,#FEEBA0,#D41E00,#672901) ;
-    background-size: 300% 300%;
-    border-radius: 8px;
-    padding: 5px;
-    animation: colors 15s ease infinite;
-    @keyframes colors{
-        0%{
-            background-position: 0% 50%;
-        }
-
-        50%{
-            background-position: 100% 50%;
-        }
-
-        100%{
-            background-position: 0% 50%;
-        }
-    }
-`
 
 export const ContainerImg = styled.img`
     width: 300px;
     height: 300px;
     border-radius: 8px;
+   
 `;
 
-export const ContainerP = styled.p`
+export const ContainerBio = styled.div`
     word-wrap: break-word;
-    border:1px solid #000000;
+    border:1px solid white;
     width:280px;
     padding: 8px;
+    background-color:white;
+    opacity : 0.8;
+    border-radius: 10px;
+`
+export const ContainerP = styled.div`
+  color: black;
+  font-family: normal;
+  font-size: 16px;
 `
 
 export const ContainerButton = styled.div`
@@ -60,36 +34,37 @@ export const ContainerButton = styled.div`
     justify-content: space-around;
     margin: 10px;
 `
-export const ContainerCoracao = styled.div`
-position: relative;
-display: flex;
-justify-content: center;
-width: 100px;
-`
+
 export const ContainerButtonNovos = styled.div`
-box-shadow: 0px 10px 14px -7px #3e7327;
-background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-background-color:#77b55a;
+box-shadow: 0px 10px 14px -7px #FF2400;
+background:linear-gradient(to bottom, #D11E00 5%, #FF2400 100%);
+background-color:#D11E00;
 border-radius:4px;
-border:1px solid #4b8f29;
+border:1px solid #88070B;
 display:inline-block;
 cursor:pointer;
-color:#ffffff;
+color:#FF9A8A;
 font-family:Arial;
 font-size:13px;
 font-weight:bold;
 padding:6px 12px;
 text-decoration:none;
-text-shadow:0px 1px 0px #5b8a3c;
+text-shadow:0px 1px 0px #A31700;
 
 myButton:hover{
-  background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-	background-color:#72b352;
+  background:linear-gradient(to bottom, #FF2400 5%, #D11E00 100%);
+	background-color:#FF2400;
 }
 
 myButton:active{
   position:relative;
 	top:1px;
 }
+`
+export const ContainerH2 = styled.h2`
+  color: white;
+  font-size: 25px;
+  margin: 6px;
+  font-family: serif;
 `
 
