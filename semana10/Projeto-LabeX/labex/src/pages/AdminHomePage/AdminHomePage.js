@@ -10,11 +10,11 @@ const AdminHomePage = () => {
     }
 
     const goToCreateTrip = () => {
-        history.push("/createTrip")
+        history.push("/admin/trips/create")
     }
 
     const goLogout = () => {
-        history.replace()
+        history.replace("/login")
     }
     return(
         <div>

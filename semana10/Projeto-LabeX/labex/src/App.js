@@ -1,7 +1,7 @@
 import React from "react";
 import HomePage from "./pages/HomePage/HomePage";
 import TripDetailsPage from "./pages/TripDetailsPage/TripDetailsPage";
-import ListTripsPage from "./pages/TripDetailsPage/TripDetailsPage"
+import ListTripsPage from "./pages/ListTripsPage/ListTripsPage"
 import CreateTripPage from "./pages/CreateTripPage/CreateTripPage"
 import LoginPage from "./pages/LoginPage/LoginPage"
 import ApplicationFormPage from "./pages/ApplicationFormPage/ApplicationFormPage"
@@ -35,11 +35,11 @@ const App = () => {
       <AdminHomePage/>
       </Route>
 
-      <Route exact path={"admin/trips/create"}>
+      <Route exact path={"/admin/trips/create"}>
       <CreateTripPage/>
       </Route>
      
-      <Route exact path={"/admin/trips/:id"}>
+      <Route exact path={"/admin/trips"}>
       <TripDetailsPage/>
       </Route>
       
