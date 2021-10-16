@@ -12,7 +12,7 @@ const ApplicationFormPage = () => {
 
 
     const postApplyToTrip = (success) => {
-        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trips/${id}/apply`
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trips/:id/apply`
         const body = {
             name: name,
             age: age,

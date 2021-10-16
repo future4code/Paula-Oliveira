@@ -16,8 +16,10 @@ const LoginPage = () => {
     return(
         <div>
             <p>LoginPage</p>
-            <button onClick={goBack}>Voltar</button>
+            <input placeholder="E-mail"/>
+            <input placeholder="Senha"/>
             <button onClick={goToAdminTripsList}>Login</button>
+            <button onClick={goBack}>Voltar</button>
         </div>
     )
 }
