@@ -1,1 +1,1 @@
-export const Base_Url = "{{baseURL}}"
+export const BASE_URL = "{{baseURL}}"
