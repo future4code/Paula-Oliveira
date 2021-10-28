@@ -2,24 +2,22 @@ import { Button, TextField } from "@material-ui/core";
 import React from "react";
 import { InputsContainer, ScreenContainer, SignUpButtonContainer } from "./styled";
 import useForm from "../../hooks/useForm"
-import axios from "axios";
-import {BASE_URL} from "../../constants/urls"
 import { outlinedInputClasses } from "@mui/material";
+import { useHistory } from "react-router-dom";
+import { login } from "../../services/users"
+import useUnprotectedPage from "../../hooks/useUnprotectedPage"
 
 const LoginPage = () =>{
-
+  useUnprotectedPage()
   const [form, onChange, clear] = useForm({email:"", password:""})
+  const history = useHistory()
 
   const onSubmitForm = (event) => {
-    console.log(form)
+        login(form, clear, history)
         event.preventDefault()
   }
 
-  const login = () => {
-    axios.post(`${{BASE_URL}}/users/login`, form)
-  }
-
-    return(
+     return(
       <ScreenContainer>
         <h1>TELA DE LOGIN</h1>
         <InputsContainer>

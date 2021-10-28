@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ListPostPage from "../pages/ListPostPage/ListPostPage"
 import LoginPage from "../pages/LoginPage/LoginPage"
 import PostPage from "../pages/PostPage/PostPage"
-import RegistrationPage from "../pages/RegistrationPage/RegistrationPage"
+import CreateLoginPage from "../pages/CreateLoginPage/CreateLoginPage"
 import ErroPage from "../pages/ErroPage/ErroPage"
 import Header from "../components/Header/Header";
 
@@ -17,7 +17,7 @@ const Router = () => {
                 </Route>
 
                 <Route exact path="/cadastro">
-                    <RegistrationPage/>
+                    <CreateLoginPage/>
                 </Route>
 
                 <Route exact path="/lista-post">
