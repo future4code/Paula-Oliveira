@@ -6,6 +6,7 @@ import { outlinedInputClasses } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import { login } from "../../services/users"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage"
+import { goToRegistrarion } from "../../routes/coordenator";
 
 const LoginPage = () =>{
   useUnprotectedPage()
@@ -32,7 +33,6 @@ const LoginPage = () =>{
               margin={"normal"}
               required
               type={"email"}
-              
             />
 
             <TextField
@@ -53,7 +53,6 @@ const LoginPage = () =>{
             variant={"contained"}
             color={"firstColor"}
             margin={"normal"}
-          
             >
               Login
             </Button>
@@ -61,7 +60,9 @@ const LoginPage = () =>{
           </form>
         </InputsContainer>
         <SignUpButtonContainer>
+       
         <Button
+            onClick={() => goToRegistrarion(history)}
             type={"submit"}
             fullWidth
             variant={"text"}
@@ -70,6 +71,7 @@ const LoginPage = () =>{
             >
               Cadastre-se
         </Button>
+      
         </SignUpButtonContainer>
       </ScreenContainer>
     )

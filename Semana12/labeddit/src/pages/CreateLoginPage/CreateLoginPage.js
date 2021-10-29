@@ -10,25 +10,23 @@ import axios from "axios";
 import { BASE_URL } from "../../constants/urls";
 import { outlinedInputClasses } from "@mui/material";
 import { useHistory } from "react-router";
+import { signUp } from "../../services/users"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 const CreateLoginPage = () => {
   useUnprotectedPage();
   const history = useHistory();
   const [form, onChange, clear] = useForm({
-    name: "",
+    username: "",
     email: "",
     password: "",
   });
 
   const onSubmitForm = (event) => {
-    console.log(form);
+    signUp(form, clear, history)
     event.preventDefault();
   };
 
-  const createLogin = () => {
-    axios.post(`${{ BASE_URL }}/users/login`, form);
-  };
 
   return (
     <ScreenContainer>
@@ -36,15 +34,15 @@ const CreateLoginPage = () => {
       <InputsContainer>
         <form onSubmit={onSubmitForm}>
           <TextField
-            name={"name"}
-            value={form.name}
+            name={"username"}
+            value={form.username}
             onChange={onChange}
             label={"Nome"}
             variant={"outlined"}
             fullWidth
             margin={"normal"}
             required
-            type={"Name"}
+            type={"name"}
           />
           <TextField
             name={"email"}
