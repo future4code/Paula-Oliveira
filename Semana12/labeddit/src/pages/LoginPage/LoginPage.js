@@ -8,13 +8,16 @@ import { login } from "../../services/users"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage"
 import { goToRegistrarion } from "../../routes/coordenator";
 
-const LoginPage = () =>{
+
+
+const LoginPage = ({setRightButtonText}) =>{
   useUnprotectedPage()
+  
   const [form, onChange, clear] = useForm({email:"", password:""})
   const history = useHistory()
 
   const onSubmitForm = (event) => {
-        login(form, clear, history)
+        login(form, clear, history, setRightButtonText)
         event.preventDefault()
   }
 

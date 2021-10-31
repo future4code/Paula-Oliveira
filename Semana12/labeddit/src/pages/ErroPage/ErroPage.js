@@ -1,10 +1,10 @@
 import React from "react";
-
+import erro from "../../components/img/erro.gif"
 const ErroPage = () =>{
 
     return(
         <div>
-            ErroPage
+            <img src={erro}></img>
         </div>
     )
 }

@@ -4,12 +4,10 @@ import Button from "@mui/material/Button";
 import { StyledToolbar } from "./styled";
 import { goToListPost, goToLogin } from "../../routes/coordenator";
 import { useHistory } from "react-router-dom";
-import { GlobalContext } from "../../contexts/GlobalContext";
-import { useContext } from "react";
+
 
 const Header = ({rightButtonText, setRightButtonText}) => {
 
-  const { states, setters, requests } = useContext(GlobalContext);
   
   const token = localStorage.getItem("token");
   const history = useHistory();
@@ -21,7 +19,7 @@ const Header = ({rightButtonText, setRightButtonText}) => {
   const rightButtonAction = () => {
     if (token) {
       logout();
-      setters.setRightButtonText("login");
+      setRightButtonText("Login")
       goToLogin(history);
     } else {
       goToLogin(history);
@@ -34,7 +32,7 @@ const Header = ({rightButtonText, setRightButtonText}) => {
           Feed
         </Button>
         <Button onClick={rightButtonAction} color="inherit">
-         logout
+        {rightButtonText}
         </Button>
       </StyledToolbar>
     </AppBar>

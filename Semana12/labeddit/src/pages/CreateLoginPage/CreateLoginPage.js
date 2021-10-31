@@ -13,7 +13,7 @@ import { useHistory } from "react-router";
 import { signUp } from "../../services/users"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
-const CreateLoginPage = () => {
+const CreateLoginPage = ({setRightButtonText}) => {
   useUnprotectedPage();
   const history = useHistory();
   const [form, onChange, clear] = useForm({
@@ -23,7 +23,7 @@ const CreateLoginPage = () => {
   });
 
   const onSubmitForm = (event) => {
-    signUp(form, clear, history)
+    signUp(form, clear, history, setRightButtonText)
     event.preventDefault();
   };
 

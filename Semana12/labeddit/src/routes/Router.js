@@ -1,23 +1,23 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import ListPostPage from "../pages/ListPostPage/ListPostPage"
 import LoginPage from "../pages/LoginPage/LoginPage"
 import PostPage from "../pages/PostPage/PostPage"
 import CreateLoginPage from "../pages/CreateLoginPage/CreateLoginPage"
 import ErroPage from "../pages/ErroPage/ErroPage"
-import Header from "../components/Header/Header";
 
-const Router = () => {
+
+const Router = ({setRightButtonText}) => {
     return(
-        <BrowserRouter>
-         <Header/>
+      
+         
             <Switch>
                 <Route exact path="/login">
-                    <LoginPage/>
+                    <LoginPage setRightButtonText={setRightButtonText}/>
                 </Route>
 
                 <Route exact path="/cadastro">
-                    <CreateLoginPage/>
+                    <CreateLoginPage setRightButtonText={setRightButtonText}/>
                 </Route>
 
                 <Route exact path="/lista-post">
@@ -32,7 +32,7 @@ const Router = () => {
                     <ErroPage/>
                 </Route>
             </Switch>
-        </BrowserRouter>
+       
     )
 }
 
