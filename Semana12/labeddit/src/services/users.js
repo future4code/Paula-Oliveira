@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import axios from "axios";
 import {BASE_URL} from "../constants/urls"
 import { goToListPost} from "../routes/coordenator"
-import { GlobalContext } from "../contexts/GlobalContext";
+
 
 
 export const login = (body, clear, history,setRightButtonText ) => {
@@ -28,3 +28,5 @@ export const login = (body, clear, history,setRightButtonText ) => {
         })
         .catch((err) => alert(err.response.data.message))
   }
+
+  

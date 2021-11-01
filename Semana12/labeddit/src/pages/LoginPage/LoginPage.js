@@ -1,83 +1,81 @@
 import { Button, TextField } from "@material-ui/core";
 import React from "react";
-import { InputsContainer, ScreenContainer, SignUpButtonContainer } from "./styled";
-import useForm from "../../hooks/useForm"
-import { outlinedInputClasses } from "@mui/material";
+import {
+  InputsContainer,
+  ScreenContainer,
+  SignUpButtonContainer,
+} from "./styled";
+import useForm from "../../hooks/useForm";
 import { useHistory } from "react-router-dom";
-import { login } from "../../services/users"
-import useUnprotectedPage from "../../hooks/useUnprotectedPage"
+import { login } from "../../services/users";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 import { goToRegistrarion } from "../../routes/coordenator";
 
+const LoginPage = ({ setRightButtonText }) => {
+  useUnprotectedPage();
 
-
-const LoginPage = ({setRightButtonText}) =>{
-  useUnprotectedPage()
-  
-  const [form, onChange, clear] = useForm({email:"", password:""})
-  const history = useHistory()
+  const [form, onChange, clear] = useForm({ email: "", password: "" });
+  const history = useHistory();
 
   const onSubmitForm = (event) => {
-        login(form, clear, history, setRightButtonText)
-        event.preventDefault()
-  }
+    login(form, clear, history, setRightButtonText);
+    event.preventDefault();
+  };
 
-     return(
-      <ScreenContainer>
-        <h1>TELA DE LOGIN</h1>
-        <InputsContainer>
-          <form onSubmit={onSubmitForm}>
-            <TextField
-              name={"email"}
-              value={form.email}
-              onChange={onChange}
-              label={"E-mail"}
-              variant={"outlined"}
-              fullWidth
-              margin={"normal"}
-              required
-              type={"email"}
-            />
+  return (
+    <ScreenContainer>
+      <h1>TELA DE LOGIN</h1>
+      <InputsContainer>
+        <form onSubmit={onSubmitForm}>
+          <TextField
+            name={"email"}
+            value={form.email}
+            onChange={onChange}
+            label={"E-mail"}
+            variant={"outlined"}
+            fullWidth
+            margin={"normal"}
+            required
+            type={"email"}
+          />
 
-            <TextField
-              name={"password"}
-              value={form.password}
-              onChange={onChange}
-              label={"Senha"}
-              variant={"outlined"}
-              fullWidth
-              margin={"normal"}
-              required
-              type={"password"}
-            />
+          <TextField
+            name={"password"}
+            value={form.password}
+            onChange={onChange}
+            label={"Senha"}
+            variant={"outlined"}
+            fullWidth
+            margin={"normal"}
+            required
+            type={"password"}
+          />
 
-            <Button
+          <Button
             type={"submit"}
             fullWidth
             variant={"contained"}
             color={"firstColor"}
             margin={"normal"}
-            >
-              Login
-            </Button>
-          
-          </form>
-        </InputsContainer>
-        <SignUpButtonContainer>
-       
+          >
+            Login
+          </Button>
+        </form>
+      </InputsContainer>
+      <SignUpButtonContainer>
         <Button
-            onClick={() => goToRegistrarion(history)}
-            type={"submit"}
-            fullWidth
-            variant={"text"}
-            color={"firstColor"}
-            margin={"normal"}
-            >
-              Cadastre-se
+          onClick={() => goToRegistrarion(history)}
+          type={"submit"}
+          fullWidth
+          variant={"text"}
+          color={"firstColor"}
+          margin={"normal"}
+        >
+          Cadastre-se
         </Button>
-      
-        </SignUpButtonContainer>
-      </ScreenContainer>
-    )
-}
+      </SignUpButtonContainer>
+    </ScreenContainer>
+  );
+};
 
 export default LoginPage;

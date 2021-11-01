@@ -3,12 +3,8 @@ import React from "react";
 import {
   InputsContainer,
   ScreenContainer,
-  SignUpButtonContainer,
 } from "./styled";
 import useForm from "../../hooks/useForm";
-import axios from "axios";
-import { BASE_URL } from "../../constants/urls";
-import { outlinedInputClasses } from "@mui/material";
 import { useHistory } from "react-router";
 import { signUp } from "../../services/users"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
