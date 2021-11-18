@@ -7,7 +7,6 @@ const minhaString:string = "valor"
 const meuNumero:number | string = 34
 
 //c)
-
 type pessoa ={
     nome:string,
     idade:number,
