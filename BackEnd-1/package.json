@@ -1,0 +1,17 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node ./index.js",
+    "ex1": "node ./exercicio1/exercicio1.js",
+    "ex2": "node ./exercicio2/exercicio2.js",
+    "ex3": "node ./exercicio3/exercicio3.js"
+  },
+  "author": "Paula Rabelo",
+  "license": "ISC",
+  "dependencies": {
+    "colog": "^1.0.4"
+  }
+}
