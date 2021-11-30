@@ -2,11 +2,21 @@ import { Request, Response } from "express"
 import { connection } from "../data/connection"
 import { user } from "../types"
 
-
-export const getAllUsers = async(req: Request,res: Response): Promise<void> =>{
+export const getAllUsers = async(
+   req: Request,
+   res: Response
+   ): Promise<void> =>{
    try {
-      const users = await connection("aula49_recipes")
 
+      const name = req.query.name || "%"
+
+      const sort = req.query.sort === "name" ? "name" : "type"
+      const order = req.query.order || "ASC" ? "ASC" : "email"
+
+      const users = await connection("aula49_exercicio")
+         .where("email", "LIKE", `%${name}%`)
+         .orderBy(sort, order)
+         
       if(!users.length){
          res.statusCode = 404
          throw new Error("No users found")
@@ -26,8 +36,11 @@ export default async function selectAllUsers():Promise<any> {
       FROM aula49_exercicio;
    `)
 
+
    return result[0]
 }
+
+
 
 
 const toUser = (input: any): user => {
