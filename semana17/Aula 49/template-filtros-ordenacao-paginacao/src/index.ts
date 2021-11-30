@@ -11,7 +11,6 @@ app.use(cors())
 
 app.get("/users", getAllUsers)
 
-
 app.get("/users/:id", async (req, res) => {
    try{
      const result =  await connection.raw(`type`);
