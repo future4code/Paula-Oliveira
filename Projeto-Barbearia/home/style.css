@@ -149,3 +149,24 @@ footer{
     font-size: 13px;
     margin: 20px 0 0 ;
 }
+
+/*---------MOBILE--------*/
+
+@media screen and (max-width: 700px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+        width: auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+        text-align: center;
+    }
+
+    .lista-beneficios, .imagem-beneficios{
+        width: 100%;
+    }
+}

@@ -103,6 +103,10 @@ td, th{
     padding: 8px 15px;
 }
 
+fieldset{
+    border: none; 
+}
+
 
 /* ------FOOTER------- */
 
@@ -116,4 +120,39 @@ footer{
     color: #ffffff ;
     font-size: 13px;
     margin: 20px 0 0 ;
+}
+
+/*---------MOBILE--------*/
+
+@media screen and (max-width: 700px) {
+    .caixa, .enviar {
+        width: auto;
+    }
+
+    .input-padrao{
+        width: 30%;
+        margin: 10px 10px 20px;
+    }
+
+    h1{
+        text-align: center;
+    }
+    
+    nav{
+        position: static;
+        text-align: center;
+    }
+    
+    form, table{
+        margin: 10px;
+    }
+    
+    .enviar {
+        width: 30%;
+    }
+
+    form label{
+        width: 40%;
+    }
+
 }
